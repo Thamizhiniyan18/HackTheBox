@@ -2,7 +2,7 @@
 
 ## Overview
 
-Hello everyone, In this blog we are going to solve You Know 0xDiablos from HackTheBox.
+Hello everyone, In this writeup we are going to solve You Know 0xDiablos from HackTheBox.
 
 Link for the machine : [https://app.hackthebox.com/challenges/106](https://app.hackthebox.com/challenges/106)
 
@@ -63,7 +63,7 @@ I found the following functions under the functions drop down in symbol tree tab
 <figure><img src="../.gitbook/assets/Untitled 3 (15).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-If you weren’t able to locate the functions drop down, do this to see a list of all the functions: Got to the Windows menu in the tool bar and press Functions. You will see a tab opened like this:
+If you weren’t able to locate the functions drop down, do this to see a list of all the functions: Go to the Windows menu in the tool bar and press Functions. You will see a tab opened like this:
 
 <img src="../.gitbook/assets/Untitled 4 (14).png" alt="" data-size="original">
 {% endhint %}

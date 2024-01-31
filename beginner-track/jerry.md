@@ -2,7 +2,7 @@
 
 ## Overview
 
-Hello everyone, In this blog we are going to solve Jerry from HackTheBox.
+Hello everyone, In this writeup we are going to solve Jerry from HackTheBox.
 
 Link for the machine : [https://app.hackthebox.com/machines/Jerry](https://app.hackthebox.com/machines/Jerry)
 

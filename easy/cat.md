@@ -20,7 +20,7 @@ After extracting the zip, we can see a file named `cat.ab`. I used `file` comman
 
 <figure><img src="../.gitbook/assets/Untitled 1 (11).png" alt=""><figcaption></figcaption></figure>
 
-From the output of the file command, we can devise that the given file is android backup file.
+From the output of the file command, we can conclude that the given file is android backup file.
 
 ***
 

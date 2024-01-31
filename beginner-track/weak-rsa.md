@@ -2,7 +2,7 @@
 
 ## Overview
 
-Hello everyone, In this blog we are going to solve Weak RSA from HackTheBox.
+Hello everyone, In this writeup we are going to solve Weak RSA from HackTheBox.
 
 Link for the machine : [https://app.hackthebox.com/challenges/6](https://app.hackthebox.com/challenges/6)
 

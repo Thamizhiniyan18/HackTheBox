@@ -171,7 +171,7 @@ The `joomla.xml` was accessible and got the joomla version: 4.2.6.
 
 Next I searched for exploits for the above mentioned version and found the following:
 
-<figure><img src="../.gitbook/assets/Untitled 19 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 19 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### CVE-2023-23752
 
@@ -187,11 +187,11 @@ So, instead of running the exploit, I directly visited the above endpoints in th
 
 The first endpoint responded with a list of users.
 
-<figure><img src="../.gitbook/assets/Untitled 20 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 20 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 And the second endpoint responded with the configuration of the application which also had the password of the user `lewis`, that we found in the previous endpoint, who is part of the `Super Users` group.
 
-<figure><img src="../.gitbook/assets/Untitled 21 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 21 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -199,7 +199,7 @@ And the second endpoint responded with the configuration of the application whic
 
 With credentials `lewis:P4ntherg0t1n5r3c0n##`, that we found in the enumeration process, I tried to login in the `joomla` administrator page and was able successfully login.
 
-<figure><img src="../.gitbook/assets/Untitled 22 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 22 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Since we got access to administrator dashboard, I checked out whether it is possible to inject or modify the code in the available templates as mentioned here:&#x20;
 

@@ -114,21 +114,21 @@ Now its time to escalate our privileges and find the root flag.
 
 I was looking out for some common privilege escalation vectors and found this.
 
-<figure><img src="../.gitbook/assets/Untitled 15 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 15 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The user `puma` can run the command `/usr/bin/systemctl status trail.service` as `sudo` without entering the password. I checked GTFObins regarding this and found this&#x20;
 
 {% embed url="https://gtfobins.github.io/gtfobins/systemctl/#sudo" %}
 
-<figure><img src="../.gitbook/assets/Untitled 16 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 16 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Thus if we run the command `sudo /usr/bin/systemctl status trail.service` , then run the command `!sh` after entering into the less page, we can escalate our privileges as root.
 
-<figure><img src="../.gitbook/assets/Untitled 17 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 17 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now we have successfully escalated our privileges as root. Now its time to find the root flag.
 
-<figure><img src="../.gitbook/assets/Untitled 18 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 18 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 We have successfully found the root flag.
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Hello everyone, In this blog we are going to solve Lame from HackTheBox.
+Hello everyone, In this writeup we are going to solve Lame from HackTheBox.
 
 Link for the machine : [https://app.hackthebox.com/machines/1](https://app.hackthebox.com/machines/1)
 
@@ -26,9 +26,9 @@ First start the reconnaissance by running `rustscan` on the target IP address.
 
 Command: `rustscan -a 10.10.10.3 -- -A -Pn`
 
-<figure><img src="../.gitbook/assets/Untitled.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Untitled 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 1 (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Results
 
@@ -50,7 +50,7 @@ First, I started enumerating the FTP service running on Port `21`.
 
 From the scan results, we can see that the Anonymous login is allowed for FTP.
 
-<figure><img src="../.gitbook/assets/Untitled 2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 2 (2).png" alt=""><figcaption></figcaption></figure>
 
 So I tried to login as `Anonymous`
 
@@ -60,9 +60,9 @@ username: `Anonymous`
 
 Password: `Anonymous`
 
-<figure><img src="../.gitbook/assets/Untitled 3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 3 (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Untitled 4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 4 (2).png" alt=""><figcaption></figcaption></figure>
 
 Found nothing in the FTP anonymous Login.
 
@@ -74,7 +74,7 @@ Next I started to enumerate SMB service running on port 139. I used `enum4linux`
 
 Command: `enum4linux -a 10.10.10.3`
 
-<figure><img src="../.gitbook/assets/Untitled 5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 5 (3).png" alt=""><figcaption></figcaption></figure>
 
 From the response of `enum4linux`, I didn’t found any interesting shares.
 
@@ -96,7 +96,7 @@ To use the above exploit, execute the commands in `msfconsole` as follows:
 
 `run`
 
-<figure><img src="../.gitbook/assets/Untitled 6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 6 (3).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -106,7 +106,7 @@ Now we have got access to the target machine as `root`. I searched for the user 
 
 command: `find / -name user.txt`
 
-<figure><img src="../.gitbook/assets/Untitled 7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 7 (1).png" alt=""><figcaption></figcaption></figure>
 
 And we have found the user flag.
 
@@ -116,7 +116,7 @@ And we have found the user flag.
 
 Now I searched for the root flag using the same method and found the root flag:
 
-<figure><img src="../.gitbook/assets/Untitled 8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled 8 (1).png" alt=""><figcaption></figcaption></figure>
 
 We have successfully found all the flags.
 
