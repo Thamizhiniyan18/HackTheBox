@@ -1,0 +1,7 @@
+---
+description: HackTheBox Easy Machines Writeups by Thamizhiniyan C S
+---
+
+# Easy
+
+<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Analytics</td><td></td><td></td><td><a href="analytics.md">analytics.md</a></td></tr><tr><td align="center">Cat</td><td></td><td></td><td><a href="cat.md">cat.md</a></td></tr><tr><td align="center">Crafty</td><td></td><td></td><td><a href="crafty.md">crafty.md</a></td></tr><tr><td align="center">CozyHosting</td><td></td><td></td><td><a href="cozyhosting.md">cozyhosting.md</a></td></tr><tr><td align="center">Devvortex</td><td></td><td></td><td><a href="devvortex.md">devvortex.md</a></td></tr><tr><td align="center">Keeper</td><td></td><td></td><td><a href="keeper.md">keeper.md</a></td></tr><tr><td align="center">NodeBlog</td><td></td><td></td><td><a href="nodeblog.md">nodeblog.md</a></td></tr><tr><td align="center">PC</td><td></td><td></td><td><a href="pc.md">pc.md</a></td></tr><tr><td align="center">Pilgrimage</td><td></td><td></td><td><a href="pilgrimage.md">pilgrimage.md</a></td></tr><tr><td align="center">Sau</td><td></td><td></td><td><a href="sau.md">sau.md</a></td></tr><tr><td align="center">Squashed</td><td></td><td></td><td><a href="squashed.md">squashed.md</a></td></tr></tbody></table>
