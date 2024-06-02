@@ -69,15 +69,15 @@ You can install `git-dumper` using following steps:
 
 Now its time to dump the git repository.
 
-<figure><img src="../../.gitbook/assets/Untitled 5 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 5 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 When I tried to dump the website using the IP address, the request get’s redirected. So I visited the website on port 80.
 
-<figure><img src="../../.gitbook/assets/Untitled 6 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 6 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 The website gets redirected to `pilgrimage.htb`. To visit the website we have add this domain to our machines `hosts` file. Open `/etc/hosts` file with root permissions with your favourite text editor and add the following: `10.10.11.219 pilgrimage.htb`and save the file.
 
-<figure><img src="../../.gitbook/assets/Untitled 7 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 7 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now reload the website.
 
@@ -119,7 +119,7 @@ Next upload the create `image.png` to the website to shrink it. After shrinking 
 
 Next download the resized image.
 
-<figure><img src="../../.gitbook/assets/Untitled 14 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 14 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now view the raw content of the downloaded image using the `magick` tools `identify` utility. Use the same `magick` tool, that we got from the git dump.
 
@@ -127,7 +127,7 @@ Now view the raw content of the downloaded image using the `magick` tools `ident
 
 Scroll down to get the raw hex version of the embedded details of the `/etc/passwd` file from the target machine.
 
-<figure><img src="../../.gitbook/assets/Untitled 16 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 16 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Copy the above block of hex code and put it in [https://gchq.github.io/CyberChef/](https://gchq.github.io/CyberChef/), and use the ingredient named `From Hex`.
 

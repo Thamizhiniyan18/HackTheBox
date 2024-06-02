@@ -83,23 +83,23 @@ username: `something`
 
 password: `something`
 
-<figure><img src="../../.gitbook/assets/Untitled 5 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 5 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Successfully created a user with the name `something`
 
 Next I tried to login with the created user.
 
-<figure><img src="../../.gitbook/assets/Untitled 6 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 6 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Successfully logged in!!! We got the `id` and the `token` for the user `something`. Note the id and token.
 
 Now I tried the `getinfo` feature. I used the id and token that we noted in the previous step.
 
-<figure><img src="../../.gitbook/assets/Untitled 7 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 7 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 My Request was successful, but there was no details in the response, instead it was an empty object.
 
-<figure><img src="../../.gitbook/assets/Untitled 8 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 8 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now we are able to successfully send request to the `getInfo` feature. The `id` value in the `getinfo` tab might be vulnerable to SQL injection. So I again tried the `getInfo` function, but this time I captured the request with burpsuite and I saved the request as a file.
 
@@ -120,9 +120,9 @@ sqlmap -r request --flush-session --threads 10 --batch -p id --level 3 --risk 3
 // -p : to specify the Testable parameter(s)
 ```
 
-<figure><img src="../../.gitbook/assets/Untitled 9 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 9 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/Untitled 10 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 10 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 From the output of `sqlmap`, we can see that the `id` parameter is vulnerable to SQL Injection and from the output we can see that the database used by the gRPC service is `sqlite`.
 
@@ -140,7 +140,7 @@ sqlmap -r request --flush-session --threads 10 --batch -p id --level 3 --risk 3 
 // --dump : Dump DBMS database table entries
 ```
 
-<figure><img src="../../.gitbook/assets/Untitled 11 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 11 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 From the results of `sqlmap`, we have found a new credential:
 
@@ -150,7 +150,7 @@ password: `HereIsYourPassWord1431`
 
 I tried to login via SSH using the above credentials and got in.
 
-<figure><img src="../../.gitbook/assets/Untitled 12 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 12 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -158,7 +158,7 @@ I tried to login via SSH using the above credentials and got in.
 
 I listed out the current directory and found the user flag.
 
-<figure><img src="../../.gitbook/assets/Untitled 13 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 13 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 And also, in the current directory, found the following tools:
 
@@ -174,7 +174,7 @@ I first ran `[linpeas.sh](http://linpeas.sh)` , looking out for privilege escala
 
 ### **Method 1**
 
-<figure><img src="../../.gitbook/assets/Untitled 14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 14 (1).png" alt=""><figcaption></figcaption></figure>
 
 From the output of `linpeas.sh`, we can see that the `/usr/bin/bash` has a SUID bit set on it.
 
@@ -190,7 +190,7 @@ We have successfully escalated our privileges.
 
 ### **Method 2**
 
-<figure><img src="../../.gitbook/assets/Untitled 16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 16 (1).png" alt=""><figcaption></figcaption></figure>
 
 From the output of `linpeas.sh`, we can see that a service is running on port `8000` locally on the target machine.
 
@@ -200,7 +200,7 @@ To do that we have to have the same version of chisel on both attacking and targ
 
 First lets check the chisel version available in the target machine.
 
-<figure><img src="../../.gitbook/assets/Untitled 17 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Untitled 17 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The target machine has chisel version 1.8.1.
 

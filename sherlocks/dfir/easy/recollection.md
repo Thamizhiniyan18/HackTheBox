@@ -138,11 +138,11 @@ vol.py --profile=Win7SP1x64 -f recollection.bin consoles
 # consoles - Extract command history by scanning for _CONSOLE_INFORMATION
 ```
 
-<figure><img src="../../../.gitbook/assets/Untitled 3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 3 (1).png" alt=""><figcaption></figcaption></figure>
 
 From the output, we can see that the attacker has executed the Powershell Command and the output of the command is '`iex`'. I searched google about iex and got the cmdlet name.
 
-<figure><img src="../../../.gitbook/assets/Untitled 4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 4 (1).png" alt=""><figcaption></figcaption></figure>
 
 **Answer:** `Invoke-Expression`
 
@@ -294,7 +294,7 @@ vol.py --profile=Win7SP1x64 -f recollection.bin filescan | grep passwords.txt
 # filescan - Pool scanner for file objects
 ```
 
-<figure><img src="../../../.gitbook/assets/Untitled 15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 15 (1).png" alt=""><figcaption></figcaption></figure>
 
 **Answer:**
 
@@ -320,7 +320,7 @@ vol.py --profile=Win7SP1x64 -f recollection.bin consoles
 # consoles - Extract command history by scanning for _CONSOLE_INFORMATION
 ```
 
-<figure><img src="../../../.gitbook/assets/Untitled 10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 10 (1).png" alt=""><figcaption></figcaption></figure>
 
 **Answer:** `b0ad704122d9cffddd57ec92991a1e99fc1ac02d5b4d8fd31720978c02635cb1`
 
@@ -338,11 +338,11 @@ I used the hash that we got in the last task in the VirusTotal's search feature,
 
 {% embed url="https://www.virustotal.com/gui/home/search" %}
 
-<figure><img src="../../../.gitbook/assets/Untitled 11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 11 (1).png" alt=""><figcaption></figcaption></figure>
 
 From the results of VirusTotal, we can see that the file is a stealer. We can get the Imphash from the Details tab.
 
-<figure><img src="../../../.gitbook/assets/Untitled 12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 12 (1).png" alt=""><figcaption></figcaption></figure>
 
 **Answer:** `d3b592cd9481e4f053b5362e22d61595`
 
@@ -358,7 +358,7 @@ Following the previous question, tell us the date in UTC format when the malicio
 
 We can get the date from the VirusTotal Details section that we saw in the last task.
 
-<figure><img src="../../../.gitbook/assets/Untitled 13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 13 (1).png" alt=""><figcaption></figcaption></figure>
 
 **Answer:** `2022-06-22 11:49:04`
 
@@ -382,7 +382,7 @@ vol.py --profile=Win7SP1x64 -f recollection.bin netscan
 # netscan - Scan a Vista (or later) image for connections and sockets
 ```
 
-<figure><img src="../../../.gitbook/assets/Untitled 17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 17 (1).png" alt=""><figcaption></figcaption></figure>
 
 From the ouput, we can see that the there is owner named system, which is the local IP address.
 
@@ -566,7 +566,7 @@ vol.py --profile=Win7SP1x64 -f recollection.bin filescan | grep csrsss.exe
 # filescan - Pool scanner for file objects
 ```
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 From the output, we can see that we have two addresses for the same file, both are same, so I dumped the first one using the `dumpfile` plugin.
 
@@ -590,7 +590,7 @@ The extracted file is Windows executable. Next I uploaded the file to VirusTotal
 
 {% embed url="https://www.virustotal.com/gui/home/upload" %}
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 From the results of VirusTotal, we infer that the file that the victim downloaded is a trojan. You can find more details about the malware here: [https://www.virustotal.com/gui/file/266da3c8353dbccc945217af3c7cd084a5352971953b978802d270450268fcb5](https://www.virustotal.com/gui/file/266da3c8353dbccc945217af3c7cd084a5352971953b978802d270450268fcb5)
 

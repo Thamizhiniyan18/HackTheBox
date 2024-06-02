@@ -46,7 +46,7 @@ I tried the Detection payload from the above website to check whether it is vuln
 
 I used Postman to send requests because it will be easy to modify and send the request each time.
 
-<figure><img src="../../../.gitbook/assets/Untitled 3 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 3 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 As mentioned in the Detection section, the server thrown a Error. So this site is vulnerable to template injection.
 
@@ -56,28 +56,28 @@ As mentioned in the Detection section, the server thrown a Error. So this site i
 
 Next I tried some random payloads from the site and found the following which worked:
 
-<figure><img src="../../../.gitbook/assets/Untitled 4 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 4 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 When I tried one of the above mentioned payloads, It worked:
 
-<figure><img src="../../../.gitbook/assets/Untitled 5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 5 (2).png" alt=""><figcaption></figcaption></figure>
 
 Next again I tried some of the payloads in the above section and found the following payload to be working:
 
-<figure><img src="../../../.gitbook/assets/Untitled 6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 6 (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Untitled 7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 7 (2).png" alt=""><figcaption></figcaption></figure>
 
 Okay, now we are able to execute commands and get the output for those commands. So I modified the request to list the contents of the directory:
 
 **Modified Payload:** `{{ self.**init**.**globals**.**builtins**.**import**('os').popen('ls').read() }}`
 
-<figure><img src="../../../.gitbook/assets/Untitled 8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 8 (1).png" alt=""><figcaption></figcaption></figure>
 
 If we take a look at the response we can see the flag file `flag.txt`. This time I modified the payload to view the contents of the `flag.txt` file:
 
 **Modified Payload:** `{{ self.**init**.**globals**.**builtins**.**import**('os').popen('cat flag.txt').read() }}`
 
-<figure><img src="../../../.gitbook/assets/Untitled 9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled 9 (1).png" alt=""><figcaption></figcaption></figure>
 
 And we got the flag…….

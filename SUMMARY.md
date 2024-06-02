@@ -51,3 +51,6 @@
 * [DFIR](sherlocks/dfir/README.md)
   * [Easy](sherlocks/dfir/easy/README.md)
     * [Recollection](sherlocks/dfir/easy/recollection.md)
+* [SOC](sherlocks/soc/README.md)
+  * [Easy](sherlocks/soc/easy/README.md)
+    * [Meerkat](sherlocks/soc/easy/meerkat.md)
