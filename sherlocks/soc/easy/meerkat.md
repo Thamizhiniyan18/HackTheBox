@@ -16,7 +16,7 @@ As a fast growing startup, Forela have been utilising a business management plat
 
 First download the given file and extract it.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 We got two files extracted. One is a PCAP file and the other one is a JSON file.
 

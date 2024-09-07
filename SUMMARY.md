@@ -56,5 +56,5 @@
     * [Meerkat](sherlocks/soc/easy/meerkat.md)
 * [Malware Analysis](sherlocks/malware-analysis/README.md)
   * [Easy](sherlocks/malware-analysis/easy/README.md)
-    * [Meerkat](sherlocks/malware-analysis/easy/meerkat.md)
     * [Heartbreaker-Continuum](sherlocks/malware-analysis/easy/heartbreaker-continuum.md)
+    * [Lockpick](sherlocks/malware-analysis/easy/lockpick.md)

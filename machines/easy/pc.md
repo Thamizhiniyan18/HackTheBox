@@ -184,7 +184,7 @@ If you check GTFObins [https://gtfobins.github.io/gtfobins/bash/#suid](https://g
 To learn more about SUID, check out: [https://thamizhiniyancs.notion.site/SUID-3f467c4031c44d7d926eef3e1bff60fb?pvs=4](https://www.notion.so/SUID-3f467c4031c44d7d926eef3e1bff60fb?pvs=21)
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 We have successfully escalated our privileges.
 

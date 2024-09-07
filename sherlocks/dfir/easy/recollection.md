@@ -16,7 +16,7 @@ A junior member of our security team has been performing research and testing on
 
 First download the given file and extract it. I used the `file` command on the extracted file to identify its file type, but it didn't give anything interesting.
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Next I used Volatility to check whether the given file is a memory dump.
 
@@ -192,7 +192,7 @@ vol.py --profile=Win7SP1x64 -f recollection.bin consoles
 # consoles - Extract command history by scanning for _CONSOLE_INFORMATION
 ```
 
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 From the output we can see that the command was not executed successfully.
 
@@ -510,7 +510,7 @@ vol.py --profile=Win7SP1x64 -f recollection.bin dumpfiles --dump-dir=./MSEdge -Q
 
 After extracting the files, I checked the file type of `file.None.0xfffffa80056d1440.dat` file using the `file` command.
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 From the output of the above command, we can see that the file is a SQLite database. So I used the following online SQLite Viewer to view the contents of the database.
 
@@ -566,7 +566,7 @@ vol.py --profile=Win7SP1x64 -f recollection.bin filescan | grep csrsss.exe
 # filescan - Pool scanner for file objects
 ```
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 From the output, we can see that we have two addresses for the same file, both are same, so I dumped the first one using the `dumpfile` plugin.
 
@@ -580,17 +580,17 @@ vol.py --profile=Win7SP1x64 -f recollection.bin dumpfiles --dump-dir=./csrss/ -Q
 # -Q - Dump File Object at physical address PHYSOFFSET
 ```
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Next, I checked the file type of the extracted file `file.None.0xfffffa8003ac3220.dat` using the `file` command.
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 The extracted file is Windows executable. Next I uploaded the file to VirusTotal to know more about it.
 
 {% embed url="https://www.virustotal.com/gui/home/upload" %}
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 From the results of VirusTotal, we infer that the file that the victim downloaded is a trojan. You can find more details about the malware here: [https://www.virustotal.com/gui/file/266da3c8353dbccc945217af3c7cd084a5352971953b978802d270450268fcb5](https://www.virustotal.com/gui/file/266da3c8353dbccc945217af3c7cd084a5352971953b978802d270450268fcb5)
 
