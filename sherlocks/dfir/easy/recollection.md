@@ -566,7 +566,7 @@ vol.py --profile=Win7SP1x64 -f recollection.bin filescan | grep csrsss.exe
 # filescan - Pool scanner for file objects
 ```
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 From the output, we can see that we have two addresses for the same file, both are same, so I dumped the first one using the `dumpfile` plugin.
 
@@ -590,7 +590,7 @@ The extracted file is Windows executable. Next I uploaded the file to VirusTotal
 
 {% embed url="https://www.virustotal.com/gui/home/upload" %}
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 From the results of VirusTotal, we infer that the file that the victim downloaded is a trojan. You can find more details about the malware here: [https://www.virustotal.com/gui/file/266da3c8353dbccc945217af3c7cd084a5352971953b978802d270450268fcb5](https://www.virustotal.com/gui/file/266da3c8353dbccc945217af3c7cd084a5352971953b978802d270450268fcb5)
 
