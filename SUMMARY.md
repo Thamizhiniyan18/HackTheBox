@@ -58,3 +58,4 @@
   * [Easy](sherlocks/malware-analysis/easy/README.md)
     * [Heartbreaker-Continuum](sherlocks/malware-analysis/easy/heartbreaker-continuum.md)
     * [Lockpick](sherlocks/malware-analysis/easy/lockpick.md)
+    * [Lockpick 2.0](sherlocks/malware-analysis/easy/lockpick-2.0.md)
